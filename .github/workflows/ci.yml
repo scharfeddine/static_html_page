@@ -18,10 +18,15 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-      -
-        name: Build and push
-        uses: docker/build-push-action@v3
-        with:
-          context: .
-          push: true
-          tags: scharfeddine/demo-app:latest
+      - 
+        name: Build Image
+        run: |
+          ./services build || true
+      - 
+        name: Test Image
+        run: |
+          ./services test
+      - 
+        name: Push Image
+        run: |
+          ./services push
