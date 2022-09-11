@@ -21,12 +21,12 @@ jobs:
       - 
         name: Build Image
         run: |
-          ./services build || true
+          ./services.sh build || true
       - 
         name: Test Image
         run: |
-          ./services test
+          ./services.sh test
       - 
         name: Push Image
         run: |
-          ./services push
+          ./services.sh push
