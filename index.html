@@ -6,6 +6,8 @@
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
    <title>Static HTML Page</title>
 </head><body>
-   <h1>Hello world</h1>
+        <script>
+            <?php echo "The timestamp of when the image was built " . file_get_contents('/build-date.txt');?>;
+        </script>
 </body>
 </html>
