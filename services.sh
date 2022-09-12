@@ -39,7 +39,7 @@ case "${command}" in
 		;;
 	"push")
 		echo -e "pushed the Docker image to Docker Hub..."
-		docker push scharfeddine/static-html-page-image:latest
+		docker push scharfeddine/static-html/static-html-page-image:latest
 		;;
 	"build")
 		echo "Build image using Dockerfile"
